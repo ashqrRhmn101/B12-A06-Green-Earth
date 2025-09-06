@@ -103,40 +103,40 @@
         </div>
       </hero>
     </header>
-    <main class="bg-[#DCFCE7] p-20">
+    <main class="bg-[#DCFCE7] md:p-20 py-20">
       <div class="text-center text-3xl font-bold mb-10">Choose Your Trees</div>
-      <section class="w-11/12 mx-auto grid grid-cols-12 gap-3">
+      <section class="w-11/12 mx-auto grid md:grid-cols-12 grid-cols-1 gap-4">
         <!-- Categories -->
-        <div class="border col-span-2 p-2">
-          <h1 class="text-2xl font-bold">Categories</h1>
-          <div id="categotis"></div>
+        <div class="md:col-span-2 text-center md:text-left">
+          <h1 class="text-2xl font-bold mb-3 text-left">Categories</h1>
+          <div id="categotis" class="space-y-2">
+            <h1 class="font-bold text-xl">All Trees</h1>
+          </div>
         </div>
         <!-- ALl trees Card -->
-        <div class="border col-span-8">sd</div>
+        <div
+          id="allCards"
+          class=" md:col-span-8 grid md:grid-cols-3 gap-4"
+        >
+          <!-- card 1 -->
+        </div>
         <!-- Your Card -->
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <div class="p-2 bg-white rounded-xl space-y-4">
             <h1 class="font-bold text-2xl">Your Card</h1>
-            <div
-              class="flex justify-between items-center bg-[#DCFCE7] p-2 rounded-lg"
-            >
-              <div class="">
-                <h2 class="font-bold">Mango Tree</h2>
-                <p class="opacity-70">$500 * 1</p>
-              </div>
-              <div class="opacity-70">
-                <i class="fa-solid fa-xmark"></i>
-              </div>
-            </div>
+            <div id="yourCard" class="flex flex-col gap-4"></div>
             
+
             <!-- Total -->
-             <div class="border-t border-gray-200 flex justify-between pt-3">
-                <h1 class="font-bold">Total: </h1>
-                <p>$<span> 0</span></p>
-             </div>
+            <div class="border-t border-gray-200 flex justify-between pt-3">
+              <h1 class="font-bold">Total:</h1>
+              <p>$<span> 0</span></p>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <script src="./index.js"></script>
   </body>
 </html>
