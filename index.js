@@ -3,6 +3,16 @@ const allTrees = () => {
     .then((res) => res.json())
     .then((jon) => displayAllTrees(jon.categories));
 };
+// Spinner
+const manageSpinner = (status) => {
+  if (status == true) {
+    document.getElementById("spinner").classList.remove("hidden");
+    document.getElementById("all-card").classList.add("hidden");
+  }else{
+    document.getElementById("spinner").classList.add("hidden");
+    document.getElementById("all-card").classList.remove("hidden");
+  }
+};
 
 // Remove Active
 const removeActive = () => {
@@ -12,6 +22,7 @@ const removeActive = () => {
 
 //  Click Button Active
 const clickBtn = (id) => {
+  manageSpinner(true);
   const url = `https://openapi.programming-hero.com/api/category/${id}`;
   fetch(url)
     .then((res) => res.json())
@@ -35,7 +46,7 @@ const lodeTreeDetail = async (id) => {
 const displayDetails = (detail) => {
   // console.log(detail)
   const detailsBox = document.getElementById("detail-container");
-  detailsBox.innerHTML ="";
+  detailsBox.innerHTML = "";
   const div = document.createElement("div");
   div.innerHTML = `
         <div class="bg-white p-4 rounded-lg">
@@ -84,6 +95,7 @@ const displayCategories = (plants) => {
         `;
     plantsCard.appendChild(div);
   });
+  manageSpinner(false);
 };
 
 //
@@ -104,6 +116,7 @@ allTrees();
 
 // ALlCards
 const allCards = () => {
+  manageSpinner(true)
   fetch("https://openapi.programming-hero.com/api/plants")
     .then((res) => res.json())
     .then((json) => displayAllCards(json.plants));
@@ -121,7 +134,8 @@ const displayAllCards = (plants) => {
                     <img src="${plant.image}" class="rounded-lg h-[168px] w-[350px] mx-auto" alt="">
                  </div>
                  <div class="space-y-2 mt-2">
-                    <h1 class="text-xl font-bold">${plant.name}</h1>
+                 <button class="text-xl font-bold" onclick="lodeTreeDetail(${plant.id})">${plant.name}</button>
+                    
                     <p class="opacity-70 line-clamp-2">${plant.description}</p>
                  </div>
                  <div class="flex justify-between items-center py-2">
@@ -137,6 +151,7 @@ const displayAllCards = (plants) => {
         `;
     plantsCard.appendChild(div);
   });
+  manageSpinner(false)
 };
 
 // Total calculate Card
