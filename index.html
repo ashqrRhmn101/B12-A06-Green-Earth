@@ -105,6 +105,26 @@
     </header>
     <main class="bg-[#DCFCE7] md:p- pt-20">
       <div class="text-center text-3xl font-bold mb-10">Choose Your Trees</div>
+      <!-- Modal section -->
+      <section>
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">
+            open modal
+          </button> -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <div id="detail-container"></div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+     
+      </section>
+      <!-- Categories Section -->
       <section class="w-11/12 mx-auto grid md:grid-cols-12 grid-cols-1 gap-4">
         <!-- Categories -->
         <div class="md:col-span-2 text-center md:text-left">
@@ -121,6 +141,7 @@
         <div id="allCards" class="md:col-span-8 grid md:grid-cols-3 gap-4">
           <!-- card 1 -->
         </div>
+        
         <!-- Your Card -->
         <div class="md:col-span-2">
           <div class="p-2 bg-white rounded-xl space-y-4">
@@ -192,10 +213,16 @@
     <footer>
       <section>
         <div class="bg-[#166534] py-20">
-          <h1 class="text-center text-3xl font-bold pb-10 text-white">Plant a Tree Today</h1>
-          <div class="bg-[#15803D] w-[20%] mx-auto rounded-xl">
+          <h1 class="text-center text-3xl font-bold pb-10 text-white">
+            Plant a Tree Today
+          </h1>
+          <div class="bg-[#15803D] md:w-[30%] mx-auto rounded-xl">
             <div class="flex justify-center items-center flex-col gap-2 p-10">
-              <input type="text" placeholder="Your Name" class="input border-none" />
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="input border-none"
+              />
               <input
                 class="input validator border-none"
                 type="email"
@@ -209,17 +236,19 @@
                 <option>Velvet</option>
               </select>
               <button
-            class="p-2 border-none bg-[#FACC15] text-green-500 font-semibold rounded-3xl w-full mt-3"
-          >
-            Donate Now
-          </button>
+                class="p-2 border-none bg-[#FACC15] text-green-500 font-semibold rounded-3xl w-full mt-3"
+              >
+                Donate Now
+              </button>
             </div>
           </div>
         </div>
       </section>
       <section class="bg-[#14532D]">
         <div class="text-center p-8">
-          <h1 class="font-semibold text-white">© 2025 Green Earth. All Rights Reserved.</h1>
+          <h1 class="font-semibold text-white">
+            © 2025 Green Earth. All Rights Reserved.
+          </h1>
         </div>
       </section>
     </footer>
