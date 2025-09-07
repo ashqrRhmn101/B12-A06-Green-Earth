@@ -62,7 +62,7 @@
                   <li><a>Item 3</a></li>
                 </ul>
               </div>
-              <p class="btn btn-ghost text-xl font-bold">Green Earth</p>
+              <p class="text-xl font-bold">Green Earth</p>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
@@ -122,31 +122,33 @@
             </div>
           </div>
         </dialog>
-     
       </section>
       <!-- Loading Section -->
-       <div id="spinner" class="text-center hidden">
+      <div id="spinner" class="text-center hidden">
         <span class="loading loading-dots loading-xl"></span>
-       </div>
+      </div>
       <!-- Categories Section -->
-      <section id="all-card" class="w-11/12 mx-auto grid md:grid-cols-12 grid-cols-1 gap-4">
+      <section
+        id="all-card"
+        class="w-11/12 mx-auto grid md:grid-cols-12 grid-cols-1 gap-4"
+      >
         <!-- Categories -->
         <div class="md:col-span-2 text-center md:text-left">
           <h1 class="text-2xl font-bold mb-3 text-left">Categories</h1>
-           <button
-              class="categoriesBtn text-left p-2 font-bold text-xl hover:text-white hover:bg-[#15803D] w-full rounded-sm"
-            >
-              All Trees
-            </button>
-          <div id="categotis" class="space-y-2">
-           
-          </div>
+          <button
+            id="categoriesBtn"
+            class="categoriesBtn text-left p-2 font-bold text-xl w-full rounded-sm"
+            onclick="allTreesBtn()"
+          >
+            All Trees
+          </button>
+          <div id="categotis" class="space-y-2"></div>
         </div>
         <!-- ALl trees Card -->
         <div id="allCards" class="md:col-span-8 grid md:grid-cols-3 gap-4">
           <!-- card 1 -->
         </div>
-        
+
         <!-- Your Card -->
         <div class="md:col-span-2">
           <div class="p-2 bg-white rounded-xl space-y-4">

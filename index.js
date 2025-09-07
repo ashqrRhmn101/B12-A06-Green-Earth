@@ -8,7 +8,7 @@ const manageSpinner = (status) => {
   if (status == true) {
     document.getElementById("spinner").classList.remove("hidden");
     document.getElementById("all-card").classList.add("hidden");
-  }else{
+  } else {
     document.getElementById("spinner").classList.add("hidden");
     document.getElementById("all-card").classList.remove("hidden");
   }
@@ -66,7 +66,7 @@ const displayDetails = (detail) => {
   document.getElementById("my_modal_5").showModal();
 };
 
-// ALl Categories Card 1 by 1
+// Click ALl Categories Card 1 by 1
 const displayCategories = (plants) => {
   const plantsCard = document.getElementById("allCards");
   plantsCard.innerHTML = "";
@@ -116,7 +116,7 @@ allTrees();
 
 // ALlCards
 const allCards = () => {
-  manageSpinner(true)
+  manageSpinner(true);
   fetch("https://openapi.programming-hero.com/api/plants")
     .then((res) => res.json())
     .then((json) => displayAllCards(json.plants));
@@ -151,7 +151,13 @@ const displayAllCards = (plants) => {
         `;
     plantsCard.appendChild(div);
   });
-  manageSpinner(false)
+  manageSpinner(false);
+};
+const allTreesBtn = () => {
+  removeActive();
+  allCards();
+  const categoriesBtn = document.getElementById("categoriesBtn");
+  categoriesBtn.classList.add("active");
 };
 
 // Total calculate Card
