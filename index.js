@@ -52,7 +52,7 @@ const displayDetails = (detail) => {
         <div class="bg-white p-4 rounded-lg">
           <h1 class="text-2xl font-bold mb-2">${detail.name}</h1>
                  <div>
-                    <img src="${detail.image}" class="rounded-lg h-[250px] w-full mx-auto" alt="">
+                    <img src="${detail.image}" class="rounded-lg h-[260px] w-[400px] object-cover mx-auto" alt="">
                  </div>
                  <h1 class="border-none text-[#15803D] font-semibold mt-2"><span class="text-xl font-bold text-black">Category : </span>${detail.category}</h1>
                  <p class="text-xl mt-2"><span class="text-xl font-bold">Price :</span>৳ ${detail.price}</p>
@@ -76,7 +76,7 @@ const displayCategories = (plants) => {
     div.innerHTML = `
         <div class="bg-white p-4 rounded-lg">
                  <div>
-                    <img src="${plant.image}" class="rounded-lg h-[168px] w-[350px] mx-auto" alt="">
+                    <img src="${plant.image}" class="rounded-lg h-[168px] w-[350px] object-cover mx-auto" alt="">
                  </div>
                  <div class="space-y-2 mt-2">
                  <button class="text-xl font-bold" onclick="lodeTreeDetail(${plant.id})">${plant.name}</button>
@@ -107,7 +107,7 @@ const displayAllTrees = (trees) => {
     // console.log(tree)
     const div = document.createElement("div");
     div.innerHTML = `
-        <button id="category-btn-${tree.id}" onclick="clickBtn(${tree.id})" class="text-left p-2 font-semibold w-full rounded-sm categoriesBtn">${tree.category_name}</button>
+        <button id="category-btn-${tree.id}" onclick="clickBtn(${tree.id})" class="text-left p-2 font-semibold w-full rounded-sm hover:bg-[#85ffb6] categoriesBtn">${tree.category_name}</button>
         `;
     treesCard.appendChild(div);
   });
@@ -131,7 +131,7 @@ const displayAllCards = (plants) => {
     div.innerHTML = `
         <div class="bg-white p-4 rounded-lg">
                  <div>
-                    <img src="${plant.image}" class="rounded-lg h-[168px] w-[350px] mx-auto" alt="">
+                    <img src="${plant.image}" class="rounded-lg h-[168px] w-[350px] object-cover mx-auto" alt="">
                  </div>
                  <div class="space-y-2 mt-2">
                  <button class="text-xl font-bold" onclick="lodeTreeDetail(${plant.id})">${plant.name}</button>
@@ -166,6 +166,7 @@ const lodePrice = (name, price) => {
   const yourCard = document.getElementById("yourCard");
   const spanTotal = document.getElementById("spnTotal");
   const div = document.createElement("div");
+  alert("Add Cart");
   div.innerHTML = `
     <div
               class="flex justify-between items-center bg-[#DCFCE7] p-2 rounded-lg"
