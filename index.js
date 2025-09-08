@@ -166,7 +166,7 @@ const lodePrice = (name, price) => {
   const yourCard = document.getElementById("yourCard");
   const spanTotal = document.getElementById("spnTotal");
   const div = document.createElement("div");
-  alert("Add Cart");
+  // alert("Add Cart");
   div.innerHTML = `
     <div
               class="flex justify-between items-center bg-[#DCFCE7] p-2 rounded-lg"
